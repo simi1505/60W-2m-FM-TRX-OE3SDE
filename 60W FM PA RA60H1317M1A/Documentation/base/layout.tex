@@ -1,0 +1,30 @@
+%Geometry of document: A4 portrait
+%\geometry{paper=a4paper, top=1.6cm, bottom=2.85cm, left=0.9cm, right=2.15cm}
+%\geometry{paper=a4paper, top=3.6cm, bottom=3.6cm, left=2.6cm, right=3.7cm}
+\geometry{paper = a4paper, left = 20mm, right = 15mm, top = 15mm, bottom = 12.5mm, includeheadfoot}
+
+%Header formation
+\pagestyle{fancy}
+\fancyhf{}												% Clear header / footer
+\fancyhead[EL, OR]{\textsc{\nouppercase{\leftmark}}}    % Chapter in the right on even pages
+\fancyhead[ER, OL]{\thepage}							%Page number location
+\fancyfoot[ER, OL]{\copyright\/ Simon Dorrer, OE3SDE}	%Copyright + Name + Matrikelnmmer
+
+\fancypagestyle{plain}{									%set pagestyle also for plain page
+	\pagestyle{fancy}
+}
+
+%Separation line header / footer with 1.25pt
+%\renewcommand{\headrulewidth}{1.25pt}
+%\renewcommand{\footrulewidth}{1.25pt}
+
+% Optional: Correct bad hyphenation
+\hyphenation{}
+
+%10mm area between header / footer and textarea
+\setlength{\headsep}{10mm}
+\setlength{\footskip}{12.5mm}
+
+%No indentation, 1.1ex between paragraphs
+\setlength{\parindent}{0ex}
+\setlength{\parskip}{1.1ex plus0.25ex minus0.25ex}

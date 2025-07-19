@@ -1,0 +1,78 @@
+%Author: Simon Dorrer, k12005887
+\input{./base/packages}
+\input{./base/layout}
+\input{./base/titlepage}
+
+\begin{document}
+	% Align text on top if there is space left on the page (no rubber lengths will be stretched)
+	\raggedbottom
+	\maketitle
+	
+	% Abstract
+	\input{./abstract}
+
+	\tableofcontents
+	
+	% -- Chapter 1 ------------------------------------------------------------------------------------	
+	\chapter{Overview}
+	\label{chp:overview}
+	\input{./1_overview/overview}
+	
+	% -- Chapter 2 ------------------------------------------------------------------------------------	
+	\chapter{Circuit}
+	\label{chp:circuit}
+	\input{./2_circuit/circuit}
+	\includepdf[pages=-]{./2_circuit/60W FM PA_Circuit.pdf}
+	
+	% -- Chapter 3 ------------------------------------------------------------------------------------	
+	\chapter{PCB}
+	\label{chp:pcb}
+	\input{./3_pcb/pcb}
+	
+	% -- Chapter 4 ------------------------------------------------------------------------------------	
+	\chapter{Bill of Material}
+	\label{chp:bom}
+	\input{./4_bom/bom}
+	
+	% -- Chapter 5 ------------------------------------------------------------------------------------	
+	\chapter{Measurements}
+	\label{chp:measurements}
+	\input{./5_measurements/measurements}
+	
+	% -- Chapter 6 ------------------------------------------------------------------------------------	
+	\chapter{Microcontroller Code}
+	\label{chp:code}
+	\input{./6_code/code}
+	% -- Chapter 7 ------------------------------------------------------------------------------------	
+	\chapter{Enclosure}
+	\label{chp:enclosure}
+	\input{./7_enclosure/enclosure}
+	
+	% -- Chapter 8 ------------------------------------------------------------------------------------	
+	\chapter{Result Pictures}
+	\label{chp:result}
+	\input{./8_result/result}
+
+	%Appendix
+	\appendix
+	
+	% -- List of Abbreviations ------------------------------------------------------------------------
+	\newpage
+	\chapter*{List of Abbreviations}
+	\addcontentsline{toc}{chapter}{List of Abbreviations}
+	\markboth{List of Abbreviations}{} % Such that also header shows the right title
+	\begin{acronym}[CORDIC]
+		\input{acronyms}
+	\end{acronym}
+
+	% -- List of Figures ---------------------------------------------------------------------------------
+	\listoffigures
+	
+	% -- List of Tables ---------------------------------------------------------------------------------
+	\listoftables
+	
+	% -- Bibliography ---------------------------------------------------------------------------------
+	\bibliographystyle{./base/IEEEtran_isp}
+	\bibliography{bibliography}
+	
+\end{document}
